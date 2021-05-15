@@ -3,14 +3,14 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error,accuracy_score
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, LSTM
-import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
 import logging
 import os
 
-# Hiding unnecessary logging
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+# Hiding unnecessary TF logging
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import tensorflow as tf
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
 # Model 1 - Based on Random Forest Regressor
